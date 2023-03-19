@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form action="https://github.com/login/oauth/access_token" method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <input type="hidden" name="client_id" value="<your-client-id>">
+        <input type="hidden" name="client_secret" value="<your-client-secret>">
+        <input type="hidden" name="scope" value="repo">
+        <input type="hidden" name="state" value="<random-state-value>">
+        <input type="hidden" name="redirect_uri" value="https://<your-github-page-url>">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
