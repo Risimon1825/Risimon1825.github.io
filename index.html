@@ -5,15 +5,12 @@
 </head>
 <body>
 	<h2>Request Access to Private GitHub Repository</h2>
-	<form action="https://github.com/login/oauth/authorize" method="get">
+	<form action="/oauth/login" method="POST">
 		<input type="hidden" name="client_id" value="f145721c40667e62c48d" />
 		<input type="hidden" name="redirect_uri" value="https://api.github.com/orgs/Risimon1825/repos/Test" />
-		<input type="hidden" name="scope" value="read:user,repo" />
-		<label for="username">Your name:</label>
-		<input type="text" name="username" id="username" required />
-		<br />
-		<label for="email">Your email:</label>
-		<input type="email" name="email" id="email" required />
+		<input type="hidden" name="scope" value="read:org,repo" />
+		<label for="client_secret">Secret client :</label>
+      		<input type="text" id="client_secret" name="client_secret" /><br /><br />
 		<br />
 		<button type="submit">Request Access</button>
 	</form>
